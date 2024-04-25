@@ -31,6 +31,7 @@ export function InputNumber({description}){
             backgroundColor:"skyblue",
             borderRadius:"50%",
             boxSizing:"border-box",
+            border:"solid 2px red",
         }}
         src={iconChicken}></img>
         <input type="text" placeholder={description} value={value}
