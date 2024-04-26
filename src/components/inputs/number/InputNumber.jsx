@@ -18,9 +18,9 @@ export function InputNumber({description}){
     },[value])
 
     const handlerValue = (e)=>{
-        let valueInput = e.target.value;
+        let valueInput = e.target.value === "" ? 0 : parseInt(e.target.value);
         setValue(valueInput);
-        console.log(value);
+        console.log(typeof valueInput);
     }
     return(
         <>
@@ -34,7 +34,7 @@ export function InputNumber({description}){
             border:"solid 2px red",
         }}
         src={iconChicken}></img>
-        <input type="text" placeholder={description} value={value}
+        <input type="text" placeholder={description} value={value === 0 ? "": value }
         onChange={handlerValue}
         ></input>
         </>

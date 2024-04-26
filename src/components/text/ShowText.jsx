@@ -14,8 +14,9 @@ export function ShowText(){
         height:"70px",
         objectFit:"cover",}}
         src={sacoMaiz} alt="logo" />
-        <span>{date.foodGrams >= 1000?
-        `${conversorKilograms(date.foodGrams)}Kg`:`${date.foodGrams}grms`}</span>
+        <span>
+        {`${conversorKilograms(date.foodGrams)}Kg`}
+        </span>
         
         </>
     )

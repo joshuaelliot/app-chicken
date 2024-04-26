@@ -14,5 +14,6 @@ if(Gramos >= 1000){
 
 
 export function chickenForFood(chickens,quantityFood = 5110){
-return (chickens * quantityFood );
+let numberOfChickens= chickens === ""? 0 : chickens
+    return (numberOfChickens * quantityFood );
 }
