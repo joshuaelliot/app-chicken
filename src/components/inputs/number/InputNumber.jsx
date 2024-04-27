@@ -3,6 +3,9 @@ import { chickenForFood } from "../../../functions/conversorKg";
 import { useContext } from "react";
 import { ContextGlobal } from "../../../context/contextGlobal";
 import iconChicken from "../../../assets/images/polla.png"
+
+
+
 export function InputNumber({description}){
     const [value,setValue]= useState("");
     const {date,setDate} = useContext(ContextGlobal)
@@ -11,7 +14,8 @@ export function InputNumber({description}){
         const result = chickenForFood(value)
         console.log("useEffect")
         console.log(result);
-        setDate({...date,
+        setDate({
+            chicken:value,
             foodGrams:result,
         });
         console.log(date);
